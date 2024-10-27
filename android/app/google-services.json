@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913529947736",
+    "project_id": "nichrome-connect-11ec9",
+    "storage_bucket": "nichrome-connect-11ec9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913529947736:android:a88772936797cf501bac2d",
+        "android_client_info": {
+          "package_name": "com.example.nichrome"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg9vNx8Qzdev0bFxRo6jzQm_5SqRI0db8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
