@@ -26,9 +26,9 @@ class _VisitingCardFormState extends State<VisitingCardForm> {
   }
 
   getdata()async{
-    DocumentSnapshot snap = await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
+    DocumentSnapshot snap = await FirebaseFirestore.instance.collection("Users").doc(FirebaseAuth.instance.currentUser!.uid).get();
     setState(() {
-      name = (snap.data() as Map<String, dynamic>)['Name'];
+      name = (snap.data() as Map<String, dynamic>)['FirstName'];
     });
 
   }
@@ -113,15 +113,32 @@ class _VisitingCardFormState extends State<VisitingCardForm> {
                   return null;
                 },
               ),
+
+              SizedBox(height: 10,),
+
+
+
               TextFormField(
                 controller: _emailController,
                 decoration: InputDecoration(labelText: "Email"),
                 keyboardType: TextInputType.emailAddress,
                   validator: MultiValidator([
-                    RequiredValidator(errorText: "This field is required"),
+                    RequiredValidator(errorText: "Please enter an Email"),
                     EmailValidator(errorText: "Invalid")
                   ])
               ),
+
+
+
+
+
+              SizedBox(height: 10,),
+
+
+
+
+
+
               TextFormField(
                 controller: _mobileController,
                 decoration: InputDecoration(labelText: "Mobile"),
@@ -135,6 +152,12 @@ class _VisitingCardFormState extends State<VisitingCardForm> {
                   return null;
                 },
               ),
+
+
+              SizedBox(height: 10,),
+
+
+
               TextFormField(
                 controller: _addressController,
                 decoration: InputDecoration(labelText: "Address"),

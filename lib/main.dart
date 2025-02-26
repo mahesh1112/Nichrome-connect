@@ -1,36 +1,39 @@
-import 'package:firebase_auth/firebase_auth.dart';
+  import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:nichrome_test/app.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
-import 'package:nichrome/screens/navigation.dart';
+import 'package:nichrome_test/data/repositories/authentication/authentication_repository.dart';
+import 'package:nichrome_test/firebase_options.dart';
+import 'package:nichrome_test/localization/profile_provider.dart';
 
-import 'Authenticate/LoginScreen.dart';
+/// -- Entry point of Flutter App
+Future<void> main() async {
+  /// Widgets Binding
+  final WidgetsBinding widgetsBinding =
+      WidgetsFlutterBinding.ensureInitialized();
 
+  /// -- GetX Local Storage
+  await GetStorage.init();
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(MyApp());
-}
+  /// --Await Native Splash
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      // title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application
-        primarySwatch: Colors.lightBlue,
-
-      ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      // home: const BottomNavigation()
-      home: FirebaseAuth.instance.currentUser!=null?BottomNavigation():LoginScreen(),
-    );
-
+  // Check if Firebase has already been initialized
+  try {
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  } catch (e) {
+    // Handle any error, such as Firebase already initialized
+    print("Firebase already initialized: $e");
   }
+
+  /// Initialize Authentication Repository
+  Get.put(AuthenticationRepository());
+
+  // Register ProfileProvider with GetX
+  Get.put(ProfileProvider());
+
+  // Load all the Material Design / Themes / Localizations / Bindings
+  runApp(const App());
 }
-
-

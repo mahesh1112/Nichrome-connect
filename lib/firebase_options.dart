@@ -4,16 +4,7 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
+
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -41,49 +32,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC9ihGpbalYTdbiAEq_8YpGp9Rn7Aqv8SI',
-    appId: '1:913529947736:web:5275bfc6f244bc261bac2d',
-    messagingSenderId: '913529947736',
-    projectId: 'nichrome-connect-11ec9',
-    authDomain: 'nichrome-connect-11ec9.firebaseapp.com',
-    storageBucket: 'nichrome-connect-11ec9.appspot.com',
-    measurementId: 'G-ED2V59E4WB',
+    apiKey: 'AIzaSyBuI1DbRuGvgN5k93SbXU0hqpdk99gT540',
+    appId: '1:589777838243:web:e9bca5ed0c57b296779f16',
+    messagingSenderId: '589777838243',
+    projectId: 'nichrome-final',
+    authDomain: 'nichrome-final.firebaseapp.com',
+    storageBucket: 'nichrome-final.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAg9vNx8Qzdev0bFxRo6jzQm_5SqRI0db8',
-    appId: '1:913529947736:android:a88772936797cf501bac2d',
-    messagingSenderId: '913529947736',
-    projectId: 'nichrome-connect-11ec9',
-    storageBucket: 'nichrome-connect-11ec9.appspot.com',
+    apiKey: 'AIzaSyB_qS1wtbuqkJafRcVfxUyW2SpQ8QNY6ls',
+    appId: '1:589777838243:android:793cac3c651fdf11779f16',
+    messagingSenderId: '589777838243',
+    projectId: 'nichrome-final',
+    storageBucket: 'nichrome-final.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBGfK2sE86niKRhCPVbcpYFoPfytJtBpdc',
-    appId: '1:913529947736:ios:4fce572885ee77fc1bac2d',
-    messagingSenderId: '913529947736',
-    projectId: 'nichrome-connect-11ec9',
-    storageBucket: 'nichrome-connect-11ec9.appspot.com',
-    iosBundleId: 'com.example.nichrome',
+    apiKey: 'AIzaSyDLJzyK__faiw5_2M34kKJxRb0evhfC5D8',
+    appId: '1:589777838243:ios:aca7771083121ea6779f16',
+    messagingSenderId: '589777838243',
+    projectId: 'nichrome-final',
+    storageBucket: 'nichrome-final.appspot.com',
+    iosClientId: '589777838243-gj3mgrdnbt21bt5np7vq0laeap6oom8k.apps.googleusercontent.com',
+    iosBundleId: 'com.example.nichromeTest',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBGfK2sE86niKRhCPVbcpYFoPfytJtBpdc',
-    appId: '1:913529947736:ios:4fce572885ee77fc1bac2d',
-    messagingSenderId: '913529947736',
-    projectId: 'nichrome-connect-11ec9',
-    storageBucket: 'nichrome-connect-11ec9.appspot.com',
-    iosBundleId: 'com.example.nichrome',
+    apiKey: 'AIzaSyDLJzyK__faiw5_2M34kKJxRb0evhfC5D8',
+    appId: '1:589777838243:ios:aca7771083121ea6779f16',
+    messagingSenderId: '589777838243',
+    projectId: 'nichrome-final',
+    storageBucket: 'nichrome-final.appspot.com',
+    iosClientId: '589777838243-gj3mgrdnbt21bt5np7vq0laeap6oom8k.apps.googleusercontent.com',
+    iosBundleId: 'com.example.nichromeTest',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyC9ihGpbalYTdbiAEq_8YpGp9Rn7Aqv8SI',
-    appId: '1:913529947736:web:1734580a443667561bac2d',
-    messagingSenderId: '913529947736',
-    projectId: 'nichrome-connect-11ec9',
-    authDomain: 'nichrome-connect-11ec9.firebaseapp.com',
-    storageBucket: 'nichrome-connect-11ec9.appspot.com',
-    measurementId: 'G-7WZDJ4DGJL',
+    apiKey: 'AIzaSyBuI1DbRuGvgN5k93SbXU0hqpdk99gT540',
+    appId: '1:589777838243:web:f32c04b8037da551779f16',
+    messagingSenderId: '589777838243',
+    projectId: 'nichrome-final',
+    authDomain: 'nichrome-final.firebaseapp.com',
+    storageBucket: 'nichrome-final.appspot.com',
   );
 
 }

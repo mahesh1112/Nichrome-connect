@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../Authenticate/LoginScreen.dart';
-import '../screens/profilescreen.dart';
+import 'package:nichrome_test/localization/raj/screens/profilescreen.dart';
+
+import '../features/authentication/screens/login/login.dart';
 
 
 class Sidebar extends StatefulWidget {
